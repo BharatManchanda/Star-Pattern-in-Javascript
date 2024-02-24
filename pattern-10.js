@@ -18,15 +18,16 @@
 * * * * * * * *
 ----------------------------------------
 */
-let row=10;
-for (let i = 0; i < row*2-1; i++) {
+let row=10, k=0;
+for (let i = 0; i < row * 2 - 1; i++) {
 	let line = "";
-	for (let j = 0; j < row*2; j++) {
-		if (j >= i && j < row ) { // 
-		line += '* ';
+	for (let j = 0; j < row; j++) {
+		if (j >= k) {
+			line += '* ';
 		} else {
-		line += '  ';
+			line += '  ';
 		}
 	}
+	i < row-1 ? k++ : k--;
 	console.log(line);
 }
