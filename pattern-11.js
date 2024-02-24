@@ -18,3 +18,20 @@
 * * * * * * * * * * * * * * *
 ----------------------------------------
 */
+
+
+let row=9, min=0, max=row * 2 - 1;
+
+for (let i = 0; i < row * 2 - 1; i++) {
+  let line = '';
+	for (let j = 0; j < row * 2 - 1; j++) {
+        if (j>= min && j < max) {
+            line += `* `;
+        } else {
+            line += '  ';
+        }
+	}
+    console.log(line)
+    i < row-1 ? min++ : min--;
+    i < row-1 ? max-- : max++;
+}
